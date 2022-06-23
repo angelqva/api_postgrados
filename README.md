@@ -40,15 +40,15 @@ b) Implemente la funcionalidad necesaria para determinar la colegiatura (precio 
 
 de un postgrado dado su código, si se conoce que se calcula de la siguiente forma:
 
-•Los postgrados nacionales se calculan multiplicando $10 por cada crédito, más $15 si
+• Los postgrados nacionales se calculan multiplicando $10 por cada crédito, más $15 si
 
 se imparte fuera de la universidad.
 
-•A los postgrados internacionales se le añade $50 si se imparte en el extranjero y $20
+• A los postgrados internacionales se le añade $50 si se imparte en el extranjero y $20
 
 si es primera vez que se imparte.
 
-•Los postgrados impartidos por Doctores cobran $17 más de inscripción, mientras que
+• Los postgrados impartidos por Doctores cobran $17 más de inscripción, mientras que
 
 los impartidos por Masters sólo cobran $9 más de inscripción.
 
