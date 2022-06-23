@@ -19,7 +19,6 @@ class NacionalSerializer(serializers.ModelSerializer):
 class NacionalRead(serializers.ModelSerializer):
     profesor = ProfesorSerializer()
     estudiantes = EstudianteSerializer(many=True)
-    colegiatura = serializers.SerializerMethodField()
 
     class Meta:
         model = Nacional
@@ -40,7 +39,6 @@ class InternacionalSerializer(serializers.ModelSerializer):
 class InternacionalRead(serializers.ModelSerializer):
     profesor = ProfesorSerializer()
     estudiantes = EstudianteSerializer(many=True)
-    colegiatura = serializers.SerializerMethodField()
 
     class Meta:
         model = Internacional
