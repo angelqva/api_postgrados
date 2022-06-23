@@ -23,20 +23,7 @@ class NacionalRead(serializers.ModelSerializer):
 
     class Meta:
         model = Nacional
-        fields = ('id', 'codigo', 'tema', 'inicio', 'fin', 'cantidad_horas',
-                  'impartido_universidad', 'profesor', 'estudiantes', 'colegiatura')
-
-    def get_colegiatura(self, instance):
-        obj: Nacional = instance
-        credito = float(obj.cantidad_horas)/12
-        nacional = 10*credito
-        if obj.impartido_universidad is False:
-            nacional += 15
-        if obj.profesor.categoria_cientifica == 'doctor':
-            nacional += 17
-        if obj.profesor.categoria_cientifica == 'doctor':
-            nacional += 9
-        return round(nacional, 2)
+        fields = '__all__'
 
 
 class InternacionalSerializer(serializers.ModelSerializer):
@@ -57,22 +44,4 @@ class InternacionalRead(serializers.ModelSerializer):
 
     class Meta:
         model = Internacional
-        fields = ('id', 'codigo', 'tema', 'inicio', 'fin', 'cantidad_horas',
-                  'impartido_universidad', 'profesor', 'estudiantes', 'colegiatura')
-
-    def get_colegiatura(self, instance):
-        obj: Internacional = instance
-        credito = float(obj.cantidad_horas)/12
-        internacional = 10*credito
-        if obj.impartido_universidad is False:
-            internacional += 15
-        if obj.profesor.categoria_cientifica == 'doctor':
-            internacional += 17
-        if obj.profesor.categoria_cientifica == 'doctor':
-            internacional += 9
-        if obj.primera_vez:
-            internacional += 20
-        if obj.pais_impartido != 'Cuba':
-            internacional += 50
-
-        return round(internacional, 2)
+        fields = '__all__'
